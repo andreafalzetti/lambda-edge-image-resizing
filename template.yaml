@@ -1,0 +1,27 @@
+AWSTemplateFormatVersion: '2010-09-09'
+Transform: AWS::Serverless-2016-10-31
+Description: >
+  LambdaEdgeImageResizing
+
+  Run from console using the command:
+  `sam local invoke -e event.json --debug-port 5858 LambdaEdgeImageResizingOriginResponse`
+
+# More info about Globals: https://github.com/awslabs/serverless-application-model/blob/master/docs/globals.rst
+Globals:
+  Function:
+    Timeout: 3
+
+Resources:
+  LambdaEdgeImageResizingOriginResponse:
+    Type: AWS::Serverless::Function # More info about Function Resource: https://github.com/awslabs/serverless-application-model/blob/master/versions/2016-10-31.md#awsserverlessfunction
+    Properties:
+      CodeUri: lambda/origin-response-function/ # the path of the file to be run
+      Handler: index.handler # the name of the javascript file (index.js), followed by the name of the function
+      Runtime: nodejs12.x # For supported versions see: https://docs.aws.amazon.com/lambda/latest/dg/lambda-runtimes.html
+
+  LambdaEdgeImageResizingViewerRequest:
+    Type: AWS::Serverless::Function # More info about Function Resource: https://github.com/awslabs/serverless-application-model/blob/master/versions/2016-10-31.md#awsserverlessfunction
+    Properties:
+      CodeUri: lambda/viewer-request-function/ # the path of the file to be run
+      Handler: index.handler # the name of the javascript file (index.js), followed by the name of the function
+      Runtime: nodejs12.x # For supported versions see: https://docs.aws.amazon.com/lambda/latest/dg/lambda-runtimes.html
