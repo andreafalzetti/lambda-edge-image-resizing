@@ -16,11 +16,10 @@ const BUCKET = 'image-resize-${AWS::AccountId}-us-east-1';
 exports.handler = (event, context, callback) => {
   let response = event.Records[0].cf.response;
 
-  console.log("Response status code :%s", response.status);
+  console.log("Bucket name: %s", BUCKET);
 
-  //check if image is not present
+  // check if image is not present
   if (response.status == 404) {
-
     let request = event.Records[0].cf.request;
     let params = querystring.parse(request.querystring);
 
