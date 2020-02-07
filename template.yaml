@@ -3,8 +3,9 @@ Transform: AWS::Serverless-2016-10-31
 Description: >
   LambdaEdgeImageResizing
 
-  Run from console using the command:
-  `sam local invoke -e event.json --debug-port 5858 LambdaEdgeImageResizingOriginResponse`
+  Run from console using the commands:
+  `sam local invoke -e payload-examples/origin-response.json --debug-port 5858 LambdaEdgeImageResizingOriginResponse`
+  `sam local invoke -e payload-examples/viewer-request.json --debug-port 5858 LambdaEdgeImageResizingViewerRequest`
 
 # More info about Globals: https://github.com/awslabs/serverless-application-model/blob/master/docs/globals.rst
 Globals:

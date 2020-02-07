@@ -61,5 +61,6 @@ typings/
 .next
 
 *.json
+!payload-examples/*.json
 dist/
 .DS_Store

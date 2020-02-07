@@ -1,0 +1,43 @@
+{
+    "Records": [
+        {
+            "cf": {
+                "config": {
+                    "distributionId": "EXAMPLE"
+                },
+                "request": {
+                    "uri": "/images/image.jpg",
+                    "querystring": "d=100x100",
+                    "method": "GET",
+                    "clientIp": "2001:cdba::3257:9652",
+                    "headers": {
+                        "host": [
+                            {
+                                "key": "Host",
+                                "value": "d123.cf.net"
+                            }
+                        ],
+                        "user-agent": [
+                            {
+                                "key": "User-Agent",
+                                "value": "Test Agent"
+                            }
+                        ],
+                        "user-name": [
+                            {
+                                "key": "User-Name",
+                                "value": "aws-cloudfront"
+                            }
+                        ],
+                        "accept": [
+                            {
+                                "key": "accept",
+                                "value": "image/webp,image/apng,image/*,*/*;q=0.8"
+                            }
+                        ]
+                    }
+                }
+            }
+        }
+    ]
+}
