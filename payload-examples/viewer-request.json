@@ -1,43 +1,76 @@
 {
-    "Records": [
-        {
-            "cf": {
-                "config": {
-                    "distributionId": "EXAMPLE"
-                },
-                "request": {
-                    "uri": "/images/image.jpg",
-                    "querystring": "d=100x100",
-                    "method": "GET",
-                    "clientIp": "2001:cdba::3257:9652",
-                    "headers": {
-                        "host": [
-                            {
-                                "key": "Host",
-                                "value": "d123.cf.net"
-                            }
-                        ],
-                        "user-agent": [
-                            {
-                                "key": "User-Agent",
-                                "value": "Test Agent"
-                            }
-                        ],
-                        "user-name": [
-                            {
-                                "key": "User-Name",
-                                "value": "aws-cloudfront"
-                            }
-                        ],
-                        "accept": [
-                            {
-                                "key": "accept",
-                                "value": "image/webp,image/apng,image/*,*/*;q=0.8"
-                            }
-                        ]
+  "Records": [
+    {
+      "cf": {
+        "config": {
+          "distributionDomainName": "d123.cloudfront.net",
+          "distributionId": "EDFDVBD6EXAMPLE",
+          "eventType": "viewer-request",
+          "requestId": "MRVMF7KydIvxMWfJIglgwHQwZsbG2IhRJ07sn9AkKUFSHS9EXAMPLE=="
+        },
+        "request": {
+            "body": {
+                "action": "read-only",
+                "data": "",
+                "encoding": "base64",
+                "inputTruncated": false
+            },
+            "clientIp": "2806:109f:9:924a:868:856a:d521:d849",
+            "headers": {
+                "host": [
+                    {
+                        "key": "Host",
+                        "value": "d123.cloudfront.net"
                     }
-                }
-            }
+                ],
+                "user-agent": [
+                    {
+                        "key": "User-Agent",
+                        "value": "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_14_6) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/79.0.3945.130 Safari/537.36"
+                    }
+                ],
+                "pragma": [
+                    {
+                        "key": "Pragma",
+                        "value": "no-cache"
+                    }
+                ],
+                "cache-control": [
+                    {
+                        "key": "Cache-Control",
+                        "value": "no-cache"
+                    }
+                ],
+                "upgrade-insecure-requests": [
+                    {
+                        "key": "Upgrade-Insecure-Requests",
+                        "value": "1"
+                    }
+                ],
+                "accept": [
+                    {
+                        "key": "Accept",
+                        "value": "text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,image/apng,*/*;q=0.8,application/signed-exchange;v=b3;q=0.9"
+                    }
+                ],
+                "accept-encoding": [
+                    {
+                        "key": "Accept-Encoding",
+                        "value": "gzip, deflate"
+                    }
+                ],
+                "accept-language": [
+                    {
+                        "key": "Accept-Language",
+                        "value": "en-US,en;q=0.9,es;q=0.8,gl;q=0.7"
+                    }
+                ]
+            },
+            "method": "GET",
+            "querystring": "d=100x100",
+            "uri": "/images/image.jpeg"
         }
-    ]
+      }
+    }
+  ]
 }
